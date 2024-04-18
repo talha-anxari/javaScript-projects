@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-color: #eeeded;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 5fr; 
+    grid-template-rows: 1fr;
+}
+.aside{
+    background-color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+.aside h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #181818;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 30px 0 10 0;
+    border-bottom: 1px solid #cf0e0e;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+.aside a{
+    text-decoration: none;
+    color: #9c9c9c;
+    position: relative;
+}
+.aside li{
+    padding: 15px;
+    margin-left: 40px;
+}
+.aside a:hover::after{
+    border-radius: 5px;
+    width: 100%;
+}
+.aside a::after{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    border-radius: 8px;
+    background-color: #cf0e0e;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.container{
+    background: url(../img/wallpaper\ \(2\).jpg) no-repeat center / cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container h2{
+    font-size: 70px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 0;
+    color: #cacaca;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px){
+    .wrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .container h2{
+        font-size: 30px;
+    }
+    .aside li{
+        padding: 10px;
+        margin-inline: auto;
+        text-align: left;
+    }
+    .container{
+        background: url(../img/wallpaper\ \(2\).jpg) no-repeat cover;
+        background-position: top 10%;
+    }
+}
