@@ -161,8 +161,8 @@ var password = prompt("Enter Your Password");
 
 if (password.charCodeAt(0) >= 48 && password.charCodeAt(0) <= 57) {
     alert("Password can not begin with a number");
-} else if (password.length < 6) {
-    alert("Password must be at least 6 characters long");
+} else if (password.length < 8) {
+    alert("Password must be at least 8 characters long");
 
 } else{
     alert("Your password is valid");
